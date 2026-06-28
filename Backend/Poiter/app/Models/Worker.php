@@ -2,9 +2,18 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Worker extends Model
 {
-    //
+    use HasFactory;
+
+    // الحقول المسموح بإضافتها وتعديلها
+    protected $fillable = [
+        'full_name',
+        'specialty',
+        'hourly_rate',
+        'is_active',
+    ];
 }
